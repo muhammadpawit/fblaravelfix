@@ -4,6 +4,7 @@ use App\Http\Controllers\AkunController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MonitoringController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,10 @@ Route::group(['prefix' => 'dashboard/admin'], function () {
     Route::group(['prefix' => 'profile'], function () {
         Route::get('/', [HomeController::class, 'profile'])->name('profile');
         Route::post('update', [HomeController::class, 'updateprofile'])->name('profile.update');
+    });
+
+    Route::group(['prefix' => 'monitoring'], function () {
+        Route::get('kirimsetor', [MonitoringController::class, 'kirimsetor'])->name('monitoring.kirimsetor');
     });
 
     Route::controller(AkunController::class)

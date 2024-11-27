@@ -7,6 +7,12 @@ $links = [
         "is_multi" => false
     ],
     [
+        "href" => route('monitoring.kirimsetor'),
+        "text" => "Monitoring Kirim Setor",
+        "icon" => "fas fa-file",
+        "is_multi" => false
+    ],
+    [
         "text" => "Kelola Akun",
         "icon" => "fas fa-users",
         "is_multi" => true,
